@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>My Profile</title>
+</head>
+
+<!-- loadProfileInfo will call functions loading profile picture,
+demographics, and about me sections -->
+<body onload="loadProfileInfo()">
+	<div id="navbar">
+    Navigation bar
+	</div>
+  <br/>
+  <div id="profile-pic">
+  </div>
+  <button onclick="uploadProfilePic()">Change Profile Picture</button>
+  <br/>
+
+  <p>
+    <div id="preferred-name"></div>
+    <br/>
+
+    Location: <div id="user-location"></div>
+    Education: <div id="user-education"></div>
+    Type of Mentor: <div id="user-mentor-type"></div>
+    <!-- Later optionally add the functionality of having the users
+    choose what they would like to display -->
+  </p>
+  <br/>
+
+  <!-- Need a good amount of javascript to make this work -->
+  <div id="user-aboutme" contenteditable="true"></div>
+
+	<footer>
+		This is a footer.
+	</footer>
+
+</body>
+
+</html>

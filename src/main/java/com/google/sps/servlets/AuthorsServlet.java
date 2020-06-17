@@ -29,16 +29,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/", "/main"})
-public class MainServlet extends HttpServlet {
+@WebServlet(urlPatterns = {"/authors"})
+public class AuthorsServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     System.out.println("REQUEST AT: " + request.getServletPath());
-    // if (request.getServletPath() != "" && request.getServletPath() != "/") {
-    //   // response.sendRedirect("/");
-    //   // return;
-    // }
+
     response.setContentType("text/html;");
 
     JinjavaConfig config = new JinjavaConfig();
@@ -51,10 +48,10 @@ public class MainServlet extends HttpServlet {
     }
 
     Map<String, Object> context = new HashMap<>();
-    context.put("url", "/");
+    context.put("url", "/authors");
 
     String template =
-        Resources.toString(this.getClass().getResource("/templates/home.html"), Charsets.UTF_8);
+        Resources.toString(this.getClass().getResource("/templates/authors.html"), Charsets.UTF_8);
 
     String renderedTemplate = jinjava.render(template, context);
 

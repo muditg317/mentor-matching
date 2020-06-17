@@ -14,6 +14,9 @@ const navToSection = (elementSelector) => {
 }
 
 const goToPageSection = (pagePath, sectionID) => {
+  if (pagePath === window.location.path) {
+    return navToSection(`#${sectionID}`);
+  }
   window.location = pagePath + "#"+sectionID;
 }
 

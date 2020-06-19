@@ -46,10 +46,11 @@ body {
 }
 
 .main-content {
-  /* background-color: #ffffff99; */
   box-sizing: border-box;
   z-index: 1;
   height: -webkit-fill-available;
+  width: 100%;
+  max-width: 100%;
 }
 
 .pretty-button {
@@ -84,6 +85,7 @@ body {
 .content-block {
   display: flex;
   flex-flow: column nowrap;
+  box-sizing: 100%;
   width: 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -92,4 +94,14 @@ body {
 
 .content-block > h1 {
   align-self: center;
+}
+
+
+
+.content-block#title-block > #title {
+  font-size: 64px;
+  z-index: 1;
+  opacity: 1.0;
+  color: darkseagreen;
+  margin-top: 1em;
 }

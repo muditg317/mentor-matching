@@ -1,17 +1,3 @@
-.main-content {
-  width: 100%;
-  max-width: 100%;
-  /* background-color: var(--dark-blue); */
-}
-
-#title {
-  font-size: 64px;
-  z-index: 1;
-  opacity: 1.0;
-  color: darkseagreen;
-  margin-top: 1em;
-}
-
 .content-block#join-mentor-matcher {
   width: 100%;
   display: flex;

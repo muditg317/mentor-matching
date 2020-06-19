@@ -1,10 +1,3 @@
-:root {
-  --blue: #348edc;
-  --blue-lightened: #99c6ed;
-  --dark-blue: #4c81af;
-  --dark-blue-lightened: #a4c0d7;
-}
-
 .nav-bar {
   overflow: hidden;
   background-color: var(--blue);

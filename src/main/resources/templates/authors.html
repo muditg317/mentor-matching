@@ -5,7 +5,7 @@
 {% block styles %}
   {{ super() }}
   {% set styles = [
-      "static/styles/home.css",
+      "static/styles/landing.css"
     ] %}
   {% for style in styles %}
     <link rel="stylesheet" type="text/css" href={{ style }}>
@@ -15,11 +15,20 @@
 {% block header %}
   {% set nav_items = [
       {
-        "baseURL": "/", "sectionID": "who-am-i", "iconLabel": "user", "text": "Who Am I?"
+        "baseURL": "/about", "iconLabel": "question-circle", "text": "About",
+        "adjust": "left"
       },
+      {
+        "baseURL": "/authors", "iconLabel": "users", "text": "Meet the Creators",
+        "adjust": "left"
+      },
+      {
+        "baseURL": "/authenticate", "iconLabel": "user", "text": "Login",
+        "adjust": "right"
+      }
     ] %}
   {% include "navbar.html" %}
-  {% set title_image = "static/images/something.png" %}
+  {% set title_image = "static/images/blank.png" %}
   {% set title = "Mentor Matching" %}
   {% include "title-block.html" %}
 {% endblock %}
@@ -31,7 +40,7 @@
 {% block scripts %}
   {{ super() }}
   {% set scripts = [
-      "static/scripts/home.js",
+      "static/scripts/landing.js"
     ]%}
   {% for script in scripts %}
     <script charset="utf-8" type="text/javascript" src={{ script }}></script>
